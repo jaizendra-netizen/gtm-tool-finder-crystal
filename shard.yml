@@ -1,0 +1,15 @@
+name: gtm-tool-finder
+version: 1.0.0
+description: |
+  Search the OneGTMLab GTM tool directory (tool API reviews, comparisons and glossary terms) offline, from Crystal or the command line.
+
+authors:
+  - Jainendra Ojha <account@onegtmlab.dev>
+
+crystal: ">= 1.0.0"
+
+license: MIT
+
+targets:
+  gtm-tool-finder:
+    main: src/cli.cr
