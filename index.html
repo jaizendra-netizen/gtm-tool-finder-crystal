@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gtm-tool-finder | OneGTMLab</title>
+<meta name="description" content="Crystal shard and CLI to search the OneGTMLab GTM tool directory offline">
+<style>body{font:16px/1.6 system-ui,sans-serif;max-width:46rem;margin:2rem auto;padding:0 1rem;color:#1b1f23}pre{background:#f6f8fa;padding:1rem;overflow:auto}code{background:#f6f8fa;padding:.1em .3em}table{border-collapse:collapse}td,th{border:1px solid #d0d7de;padding:.3rem .6rem}</style>
+</head><body>
+<main>
+<h1 dir="auto">gtm-tool-finder</h1>
+<p dir="auto">Search the <a href="https://www.onegtmlab.dev">OneGTMLab</a> GTM tool directory from Crystal or your terminal:</p>
+<ul dir="auto">
+<li>API reviews for 66 sales and marketing tools: pricing, rate limits, keys and MCP support</li>
+<li>99 head-to-head tool comparisons, such as Apollo vs Clay</li>
+<li>110 plain-English definitions of GTM terms</li>
+</ul>
+<h2 dir="auto">Installation</h2>
+<p dir="auto">Add the shard to your <code class="notranslate">shard.yml</code>:</p>
+<div class="highlight highlight-source-yaml" dir="auto"><pre class="notranslate"><span class="pl-ent">dependencies</span>:
+  <span class="pl-ent">gtm-tool-finder</span>:
+    <span class="pl-ent">github</span>: <span class="pl-s">jaizendra-netizen/gtm-tool-finder-crystal</span></pre></div>
+<h2 dir="auto">Usage</h2>
+<div class="highlight highlight-source-crystal" dir="auto"><pre class="notranslate"><span class="pl-k">require</span> <span class="pl-s"><span class="pl-pds">"</span>gtm-tool-finder<span class="pl-pds">"</span></span>
+
+<span class="pl-c1">GtmToolFinder</span>.search(<span class="pl-s"><span class="pl-pds">"</span>enrichment<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>Tool<span class="pl-pds">"</span></span>, <span class="pl-c1">10</span>).each <span class="pl-k">do</span> |<span class="pl-smi">e</span>|
+  <span class="pl-c1">puts</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pse"><span class="pl-s1">#{</span></span><span class="pl-s1">e.name</span><span class="pl-pse"><span class="pl-s1">}</span></span> <span class="pl-pse"><span class="pl-s1">#{</span></span><span class="pl-s1">e.url</span><span class="pl-pse"><span class="pl-s1">}</span></span><span class="pl-pds">"</span></span>
+<span class="pl-k">end</span></pre></div>
+<p dir="auto">From a checkout, <code class="notranslate">crystal run src/cli.cr -- apollo</code> or <code class="notranslate">crystal run src/cli.cr -- --kind comparison clay</code> prints matches with their links.</p>
+<p dir="auto">Every result links to the full page on <a href="https://www.onegtmlab.dev/tool-directory">onegtmlab.dev/tool-directory</a>. The list is compiled into the shard, so it works offline and sends no data anywhere.</p>
+<p dir="auto">Also available as a <a href="https://pypi.org/project/gtm-tool-finder/">Python package</a>, a <a href="https://rubygems.org/gems/gtm-tool-finder">Ruby gem</a>, an <a href="https://hex.pm/packages/gtm_tool_finder">Elixir package</a> and a <a href="https://hex.pm/packages/gtm_tool_directory">Gleam package</a>. Built by <a href="https://www.onegtmlab.dev">OneGTMLab</a>, a GTM engineering agency. MIT licensed.</p>
+</main>
+<footer><p>Source: <a href="https://github.com/jaizendra-netizen/gtm-tool-finder-crystal">github.com/jaizendra-netizen/gtm-tool-finder-crystal</a>. Maintained by <a href="https://www.onegtmlab.dev">OneGTMLab</a>.</p></footer>
+</body></html>
